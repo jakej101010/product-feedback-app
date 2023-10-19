@@ -1,12 +1,4 @@
-type Comment = {
-  id: number;
-  content: string;
-  user: {
-    image: string;
-    name: string;
-    username: string;
-  };
-};
+import styles from "../styles/Suggestions.module.css";
 
 type Suggestion = {
   id: number;
@@ -19,22 +11,29 @@ type Suggestion = {
 };
 
 const Suggestions = ({
-  id,
   title,
   category,
   upvotes,
-  status,
   description,
   numberOfComments,
 }: Suggestion) => {
   return (
     <>
-      <div>
-        <h4>{title}</h4>
-        <p>{description}</p>
-        <p>{upvotes}</p>
-        <p>{category}</p>
-        <p>{numberOfComments}</p>
+      <div className={styles.suggestionContainer}>
+        <div className={styles.suggestionInfo}>
+          <div className={styles.suggestionUpvotes}>
+            <p>{upvotes}</p>
+          </div>
+          <div className={styles.suggestionDescription}>
+            <h4>{title}</h4>
+            <p>{description}</p>
+            <p>{category}</p>
+          </div>
+        </div>
+        <div className={styles.commentContainer}>
+          
+          <p>{numberOfComments}</p>
+        </div>
       </div>
     </>
   );

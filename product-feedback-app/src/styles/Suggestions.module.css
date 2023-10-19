@@ -1,0 +1,37 @@
+.suggestionHeader {
+  display: flex;
+  align-items: center;
+}
+
+div > p {
+  margin-right: 144px;
+}
+
+div > h3 {
+  margin-right: 32px;
+}
+
+div > button {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestionContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  width: 825px;
+  height: 151px;
+  padding: 16px;
+}
+
+.suggestionInfo {
+  display: flex;
+  margin-top: 8px;
+}
+
+.commentContainer {
+    display: flex;
+}

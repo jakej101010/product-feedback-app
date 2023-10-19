@@ -1,4 +1,5 @@
 import Suggestions from "../components/Suggestion";
+import SuggestionHeader from "../components/SuggestionHeader";
 import data from "../assets/data/data.json";
 
 const Home = () => {
@@ -6,6 +7,9 @@ const Home = () => {
 
   return (
     <>
+      <div>
+        <SuggestionHeader numberOfSuggestions={feedbackData.length} />
+      </div>
       <div>
         {feedbackData.map((item) => (
           <Suggestions
